@@ -1,0 +1,55 @@
+set terminal postscript eps enhanced defaultplex leveldefault color colortext  "Helvetica" 20 
+
+## definicao de linhas   ############################# 
+
+set style line 1 lw 3 lt 1 lc rgb "#ff0000" 
+set style line 2 lw 3 lt 1 lc rgb "#FF8000" 
+set style line 3 lw 3 lt 1 lc rgb "#8080FF" 
+set style line 4 lw 2 lt 1 lc rgb "#0000FF" 
+set style line 5 lw 2 lt 1 lc rgb "#000000" 
+set style line 5 lt 5 lc rgb "#a52a2a" 
+set style line 6 lt 6 lc rgb "#801400" 
+#set grid nopolar 
+#set grid xtics nomxtics ytics nomytics noztics nomztics nox2tics nomx2tics noy2tics nomy2tics nocbtics nomcbtics 
+#set grid front   linetype 0 linewidth 1.000,  linetype 0 linewidth 1.000 
+set key outside top center horizontal 
+
+## definicao para plot com linhas ############################# 
+set style data lines 
+set style fill transparent solid 0.2 noborder 
+
+### Configurando Linhas de Marcacao ############### 
+
+unset label 
+unset arrow 
+set style arrow 1 front nohead ls 1  
+set style arrow 2 front nohead ls 2  
+set style arrow 3 front nohead ls 3  
+set style arrow 4 front nohead ls 4  
+
+
+####  Plota clusters e global juntos   ############################# 
+
+set output "./plot/100_filtered.eps" 
+set xlabel "time (s)" offset character 0, -2, 0 font "Helvetica,24" 
+set xtics rotate by 90 offset character 0, -2, 0 autojustify 
+#set xrange[298-10:29948+10] 
+set ylabel "Rythm (mV)"  font "Helvetica,24" 
+
+
+### Faz o plot de todos os clusters ###############
+plot "./plot/100_filtered.txt" ls 5 title "ECG signal"
+
+#using ($1):(0.0001) 
+
+####  Plota clusters e global juntos   ############################# 
+
+set output "./plot/ecg_filtered.eps" 
+set xlabel "time (s)" offset character 0, -2, 0 font "Helvetica,24" 
+set xtics rotate by 90 offset character 0, -2, 0 autojustify 
+#set xrange[298-10:29948+10] 
+set ylabel "Rythm (mV)"  font "Helvetica,24" 
+
+
+### Faz o plot de todos os clusters ###############
+plot "./plot/ecg_filtered.txt" ls 5 title "ECG signal"
