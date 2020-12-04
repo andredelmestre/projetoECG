@@ -26,7 +26,7 @@ Aqui voce encontra:
 
 `codeECA` - codigos em C trabalhados na aula com a turma da ECA
 
-`slidesPDF` - codigos em C trabalhados na aula com a turma do TSI
+`codeTSI` - codigos em C trabalhados na aula com a turma do TSI
 
 
 
@@ -34,7 +34,7 @@ Aqui voce encontra:
 
 ```bash
 # go to a dir containing C codes.
-cd code<choose_a_class>
+cd code<TSI|ECA>
 # compiles and generates executable program
 make prog
 # executes the program
