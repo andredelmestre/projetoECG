@@ -53,8 +53,50 @@ float mediaVetRecursiva(float *vet, int tamanho, int ctrl){
 	}
 }
 
+int searchChar(char * str, char ch){
+	for (int i = 0; i < strlen(str); ++i)
+		if(ch == *(str+i) ){
+			return i;
+		}
+	return -1;
+}
 
 
+float findFreq(char * strFreq){
+	int pos = searchChar(strFreq, '=');
+	char *ptr_ch = strFreq+pos+2; // primeiro digito
+	int freq=0;
+
+	while( *ptr_ch >='0' && *ptr_ch <='9'){
+		freq += searchChar("0123456789", *ptr_ch);
+		ptr_ch++;
+		freq *= 10;
+	}
+	freq /= 10;
+
+	// printf("#############\n");
+	// printf("## freq = %i\n", freq);
+
+	ptr_ch++;
+	float freqSaida = freq;
+	freq = 0;
+
+	while( *ptr_ch >='0' && *ptr_ch <='9'){
+		freq += searchChar("0123456789", *ptr_ch);
+		ptr_ch++;
+		freq *= 10;
+	}
+	freq /= 10;
+
+	freqSaida = freqSaida + freq*0.01; //freqSaida.freq
+
+	// printf("#############\n");
+	// printf("## freq = %i\n", freq);
+	// printf("## freqSaida = %.2f\n", freqSaida);
+	// printf("#############\n");
+
+	return freqSaida;
+}
 
 
 //retornar o num de picos R do vetor vetECG

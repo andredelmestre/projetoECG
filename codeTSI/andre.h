@@ -12,6 +12,9 @@ int maiorValorVetIndex(float *, int);
 float mediaVet(float *vet, int tamanho);
 float mediaVetRecursiva(float *vet, int tamanho, int ctrl);
 
+int searchChar(char * str, char ch);
+float findFreq(char * strFreq);
+
 
 int identificaPicosR(float * vetECG, int tamanhoECG, int * inicioZonaInteresse, int * fimZonaInteresse, float pico_R_referencia);
 

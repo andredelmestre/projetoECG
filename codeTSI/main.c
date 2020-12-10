@@ -661,7 +661,14 @@ int main (){
 
 	int dist_pontos = pico_R[1] - pico_R[0];
 
-	float freq = 360.0;
+	char temp[50] = "# Sampling Rate (Hz):= 360.12";
+	char temp2[50] = "# Sampling Rate (Hz):= 1000.34";
+
+
+
+	float freq = findFreq(temp);
+
+	printf("\n\n\n\nfreq = %f\n\n\n\n", freq);
 
 	//fake values
 	int ac = pico_R[1];
