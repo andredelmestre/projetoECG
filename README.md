@@ -9,6 +9,7 @@ Para os alunos terem uma referencia, eu tambem estou desenvolvendo meu projeto. 
 
 Para entender o que esta sendo desenvolvido, assista [esse video](https://youtu.be/H8aN4utajPg).
 
+Para assistir a apresentacao das funcoes e o programa funcionando, veja [esse video](https://youtu.be/KSDQYPWOiBE).
 
 ## Requirements
 
@@ -24,9 +25,7 @@ Aqui voce encontra:
 
 `plot` - Arquivos de ECG e plot dos ECG coletados do repositorio physionet
 
-`codeECA` - codigos em C trabalhados na aula com a turma da ECA
-
-`codeTSI` - codigos em C trabalhados na aula com a turma do TSI
+`code` - codigos em C trabalhados na aula e em videos assincronos com as turmas TSI e ECA
 
 
 
@@ -34,7 +33,7 @@ Aqui voce encontra:
 
 ```bash
 # go to a dir containing C codes.
-cd code<TSI|ECA>
+cd code
 # compiles and generates executable program
 make prog
 # executes the program
