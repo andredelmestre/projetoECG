@@ -1,10 +1,21 @@
 Estudos sobre transmissao e processamento de sinais ECG
 ===========================================
+
 Estou trabalhando num projeto de pesquisa para adquirir, processar, enviar e visualizar sinais de eletrocardiograma (ECG). A equipe tem dois alunos, um professor de eletronica e eu. Neste repositorio estou compartilhando alguns dos meus estudos nesse tema.
 
 # Contents
-- [Programacao Estruturada](#projeto-em-programacao-estruturada)
-- [Arduino](#arduino-folder)
+- [Enviando o ECG com Arduino](#arduino-folder)
+- [Processando o ECG - disciplina de Programacao Estruturada](#projeto-em-programacao-estruturada)
+
+## Arduino Folder
+
+Estamos desenvolvendo [servidor proprio](http://ecgremoto.herokuapp.com/) e precisamos enviar os dados coletados para este servidor utilizando protocolo HTTP.
+
+O hardware para aquisicao do ECG esta em desemvolvimento e precisamos orientar a programacao de um modulo ESP8266 para comunicar com o nosso servidor.
+
+Para compreender como realizar essas requisicoes web e poder dar suporte a programacao do ESP8266, desenvolvi um codigo para se comunicar com o nosso servidor e outros servidores para fins de aprendizado. 
+
+Este codigo eh um aglomerado de inumeros tutoriais de internet e ainda esta em desenvolvimento. =)
 
 ## Projeto em Programacao Estruturada 
 
@@ -18,17 +29,6 @@ Para entender o que esta sendo desenvolvido, assista [esse video](https://youtu.
 
 Para assistir a apresentacao das funcoes e o programa funcionando, veja [esse video](https://youtu.be/KSDQYPWOiBE).
 
-## Arduino Folder
-
-Estamos desenvolvendo [servidor proprio](http://ecgremoto.herokuapp.com/) e precisamos enviar os dados coletados para este servidor utilizando protocolo HTTP.
-
-O hardware para aquisicao do ECG esta em desemvolvimento e precisamos orientar a programacao de um modulo ESP8266 para comunicar com o nosso servidor.
-
-Para compreender como realizar essas requisicoes web e poder dar suporte a programacao do ESP8266, desenvolvi um codigo para se comunicar com o nosso servidor e outros servidores para fins de aprendizado. 
-
-Este codigo eh um aglomerado de inumeros tutoriais de internet e ainda esta em desenvolvimento. =)
-
-
 ## Requirements
 
 Voce precisa ter o compilador [GCC](https://gcc.gnu.org/) para rodar os codigos escritos em linguagem C.
@@ -37,7 +37,7 @@ Compativeis com Linux e macOS.
 
 Para utilizar esses codigos no Windows sem GCC, assista [esse video](https://www.youtube.com/watch?v=h_m0vf6mt1E&list=PLeZ9_FbdLGk7K4ma8oXb3hhcjBMjF1Kcp&index=2).
 
-## Content
+## Folder Description
 Aqui voce encontra:
 
 `plot` - Arquivos de ECG e plot dos ECG coletados do repositorio physionet
@@ -45,7 +45,6 @@ Aqui voce encontra:
 `code` - codigos em C trabalhados na aula e em videos assincronos com as turmas TSI e ECA
 
 `arduino` - codigo compativel com Arduino IDE com o objetivo de enviar dados de ECG de um arquivo para diferentes clouds via protocolo HTTP
-
 
 ## Usage
 
